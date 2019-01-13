@@ -1,0 +1,42 @@
+360软件管家安装
+
+安装选择 User git from git bash only ,其他默认下一步
+配置path
+
+鼠标右键：git bash
+git config --global user.name "xxx" 回车
+git config --global user.email "xxxxx@xx.com" 回车
+
+登录github 配置ssh
+
+生成本地ssh:
+ssh-keygen -t rsa -C xxx@xx.com 回车 将id_rsa.pub 内容复制到远程的key中
+
+
+测试是否联通：ssh -T git@github.com 回车 yes 成功后生成known_hosts文件
+
+
+本地新建项目： 然后：git init
+
+去github建立项目，生产唯一标识，ssh
+
+
+跟git远程项目关联
+git remote add origin git@github.com:xxx/xxx.git
+
+第一次发布项目
+git add .
+git commit -m "注释" 默认master
+git push -u origin master
+
+拉远程项目
+git clone ssh
+
+提交
+git add .
+git commit -m ""
+git push origin master
+
+更新
+
+git pull
